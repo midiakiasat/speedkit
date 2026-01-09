@@ -2,28 +2,31 @@
 
 speedkit.eu exposes an index of finished execution systems.
 
-## What this is
-
-An execution index. A static catalog of standalone systems that execute independently.
-
-## What this is not
-
-- Not a SaaS platform
-- Not a startup site
-- Not a portfolio
-- Not personal branding
-- Not a platform that executes systems
-- Not a reverse proxy
-
 ## Systems
 
-Systems listed are standalone and non-evolving. Each system operates independently and does not receive updates or modifications after publication. Systems terminate when execution completes or fails.
+Systems listed are independent. Systems terminate when execution completes or fails. Systems do not receive modifications after publication.
 
-## Structure
+## Repository
 
-- `index.html` - Root execution index
-- `*/index.html` - Individual system pages
-- `ADD_SYSTEM.md` - Procedure for adding new systems (append-only)
+This repository contains static index material. Files are HTML, CSS, and configuration. No execution occurs in this repository. Execution occurs at system entry points defined in system pages.
+
+## Additions
+
+New systems are added using append-only procedure. Existing systems are not modified. See ADD_SYSTEM.md for procedure.
+
+## Repository Scope
+
+This repository is an execution index, not a community surface. The following features are disabled:
+
+- Issues
+- Discussions
+- Projects
+- Wiki
+- Sponsorships
+- Dependabot alerts
+- Auto-generated release notes
+
+This repository contains static index material only. No community interaction surface is provided.
 
 ## License
 
