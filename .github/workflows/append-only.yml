@@ -1,12 +1,15 @@
-name: Append-Only Check
+name: Index Integrity
 
 on:
   pull_request:
+    branches: [main]
+  push:
     branches: [main]
 
 jobs:
   append-only:
     runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
     steps:
       - uses: actions/checkout@v4
         with:
@@ -26,8 +29,42 @@ jobs:
           
           echo "PASS: No deletions detected"
 
-      - name: Compute index checksum
+  whitespace-check:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Block HTML reformatting
         run: |
-          sha256sum index.html > INDEX_CHECKSUM.txt
-          echo "Current index checksum:"
-          cat INDEX_CHECKSUM.txt
+          # Check for whitespace-only changes
+          CONTENT_CHANGES=$(git diff origin/main...HEAD -- index.html | grep "^[+-]" | grep -v "^[+-][+-][+-]" | grep -v "^[+-]\s*$" | wc -l)
+          TOTAL_CHANGES=$(git diff origin/main...HEAD -- index.html | grep "^[+-]" | grep -v "^[+-][+-][+-]" | wc -l)
+          
+          if [ "$TOTAL_CHANGES" -gt 0 ] && [ "$CONTENT_CHANGES" -eq 0 ]; then
+            echo "FAIL: Whitespace-only changes detected"
+            echo "HTML reformatting is not allowed"
+            exit 1
+          fi
+          
+          echo "PASS: No whitespace-only changes"
+
+  checksum-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify index checksum
+        run: |
+          ACTUAL=$(sha256sum index.html | cut -d' ' -f1)
+          EXPECTED=$(cat INDEX_CHECKSUM.txt | cut -d' ' -f1)
+          
+          if [ "$ACTUAL" != "$EXPECTED" ]; then
+            echo "Index has changed. Update INDEX_CHECKSUM.txt if intentional."
+            echo "Expected: $EXPECTED"
+            echo "Actual: $ACTUAL"
+          fi
+          
+          echo "Current checksum: $ACTUAL"
