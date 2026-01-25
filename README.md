@@ -25,7 +25,7 @@ IMMUTABLE · FINAL
 | SYS-001 | [CICULLIS](https://github.com/midiakiasat/CICULLIS) | Irreversible CI gate | REGISTERED |
 | SYS-002 | [MK10-PRO](https://github.com/kaaffilm/MK10-PRO) | Execution index (frozen) | REGISTERED |
 | SYS-003 | [VERIFRAX](https://github.com/Verifrax/VERIFRAX) | Deterministic verification | REGISTERED |
-| SYS-004 | [VATFIX](https://github.com/vatfix/VATFix-Plus) | VAT compliance execution | REGISTERED |
+| SYS-004 | [VATFIX](https://github.com/vatfix/VATFix-Plus) | VAT compliance execution | PENDING |
 
 ---
 

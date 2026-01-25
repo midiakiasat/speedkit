@@ -143,6 +143,24 @@ h2 {
   font-size: 10px;
   letter-spacing: 0.1em;
 }
+.registry-row .status.pending {
+  color: var(--muted);
+}
+.registry-row.pending {
+  opacity: 0.7;
+}
+
+/* Status badge for subpages */
+.status-badge {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+}
+.status-badge.pending {
+  color: var(--muted);
+}
 
 /* Annex */
 .annex {
