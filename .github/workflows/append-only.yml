@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'pull_request'
     steps:
-      - uses: actions/checkout@34e1148ab8c88cfd102cc39c0ff8041a19fc37d2 # v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
         with:
           fetch-depth: 0
 
@@ -37,7 +37,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'pull_request'
     steps:
-      - uses: actions/checkout@34e1148ab8c88cfd102cc39c0ff8041a19fc37d2 # v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
         with:
           fetch-depth: 0
 
@@ -58,7 +58,7 @@ jobs:
   checksum-verify:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@34e1148ab8c88cfd102cc39c0ff8041a19fc37d2 # v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
       - name: Verify index checksum
         run: |
@@ -77,7 +77,7 @@ jobs:
   failure-codes-integrity:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@34e1148ab8c88cfd102cc39c0ff8041a19fc37d2 # v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
       - name: Verify FAILURE_CODES.json checksum
         run: |
