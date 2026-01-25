@@ -1,0 +1,98 @@
+{
+  "registry": "speedkit.eu",
+  "snapshot_date": "2026-01-25",
+  "policy": "APPEND-ONLY",
+  "removal": "DOES NOT EXIST",
+  "systems": [
+    {
+      "id": "SYS-001",
+      "name": "CICULLIS",
+      "description": "Irreversible CI gate",
+      "repository": "https://github.com/midiakiasat/CICULLIS",
+      "status": "REGISTERED"
+    },
+    {
+      "id": "SYS-002",
+      "name": "MK10-PRO",
+      "description": "Execution index (frozen)",
+      "repository": "https://github.com/kaaffilm/MK10-PRO",
+      "status": "REGISTERED"
+    },
+    {
+      "id": "SYS-003",
+      "name": "VERIFRAX",
+      "description": "Deterministic verification",
+      "repository": "https://github.com/Verifrax/VERIFRAX",
+      "status": "REGISTERED"
+    },
+    {
+      "id": "SYS-004",
+      "name": "VATFIX",
+      "description": "VAT compliance execution",
+      "repository": "https://github.com/vatfix/VATFix-Plus",
+      "status": "PENDING"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "PRIM-001",
+      "name": "GUILLOTINE",
+      "description": "Irreversible execution",
+      "repository": "https://github.com/midiakiasat/guillotine",
+      "status": "REGISTERED"
+    },
+    {
+      "id": "PRIM-002",
+      "name": "IRREVOCULL",
+      "description": "Irreversible judgment",
+      "repository": "https://github.com/midiakiasat/irrevocull",
+      "status": "REGISTERED"
+    },
+    {
+      "id": "PRIM-003",
+      "name": "ATTESTORIUM",
+      "description": "Deterministic witness",
+      "repository": "https://github.com/midiakiasat/attestorium",
+      "status": "REGISTERED"
+    },
+    {
+      "id": "PRIM-004",
+      "name": "VALIDEXOR",
+      "description": "Deterministic verification",
+      "repository": "https://github.com/midiakiasat/validexor",
+      "status": "REGISTERED"
+    },
+    {
+      "id": "PRIM-005",
+      "name": "LIMENWARD",
+      "description": "Boundary enforcement",
+      "repository": "https://github.com/midiakiasat/limenward",
+      "status": "REGISTERED"
+    },
+    {
+      "id": "PRIM-006",
+      "name": "ORIGINSEAL",
+      "description": "Origin sealing",
+      "repository": "https://github.com/midiakiasat/originseal",
+      "status": "REGISTERED"
+    },
+    {
+      "id": "PRIM-007",
+      "name": "ARCHICUSTOS",
+      "description": "Custody primitive",
+      "repository": "https://github.com/midiakiasat/archicustos",
+      "status": "REGISTERED"
+    },
+    {
+      "id": "PRIM-008",
+      "name": "KAIROCLASP",
+      "description": "Temporal finality",
+      "repository": "https://github.com/midiakiasat/kairoclasp",
+      "status": "REGISTERED"
+    }
+  ],
+  "integrity": {
+    "hash_algorithm": "SHA-256",
+    "content_hash": "7da3b2c596520466cef552240a50ab37f907a13cecda22a82944b1343e28604e"
+  }
+}

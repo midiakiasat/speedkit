@@ -1,0 +1,59 @@
+name: Identity Check
+
+on:
+  workflow_call:
+    inputs:
+      identity_type:
+        description: 'Expected identity type (SYS or PRIM)'
+        required: true
+        type: string
+      identity_id:
+        description: 'Expected identity ID (e.g., 001, 002)'
+        required: true
+        type: string
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify README identity
+        env:
+          EXPECTED_TYPE: ${{ inputs.identity_type }}
+          EXPECTED_ID: ${{ inputs.identity_id }}
+        run: |
+          set -euo pipefail
+
+          README="README.md"
+          EXPECTED_IDENTITY="${EXPECTED_TYPE}-${EXPECTED_ID}"
+
+          if [[ ! -f "$README" ]]; then
+            echo "FAIL: README.md not found"
+            exit 1
+          fi
+
+          # Extract header block
+          HEADER=$(sed -n '/^```$/,/^```$/p' "$README" | head -10)
+
+          # Verify identity line
+          if ! echo "$HEADER" | grep -q "^${EXPECTED_IDENTITY}$"; then
+            echo "FAIL: Expected identity ${EXPECTED_IDENTITY} not found"
+            echo "Header content:"
+            echo "$HEADER"
+            exit 1
+          fi
+
+          # Verify STATUS
+          if ! echo "$HEADER" | grep -q "^STATUS: REGISTERED$"; then
+            echo "FAIL: STATUS: REGISTERED not found"
+            exit 1
+          fi
+
+          # Verify REGISTRY
+          if ! echo "$HEADER" | grep -q "^REGISTRY: https://speedkit.eu$"; then
+            echo "FAIL: REGISTRY: https://speedkit.eu not found"
+            exit 1
+          fi
+
+          echo "PASS: Identity ${EXPECTED_IDENTITY} verified"
