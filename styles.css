@@ -27,9 +27,7 @@ a:hover{text-decoration:underline}
   gap:24px;
   align-items:flex-end;
   justify-content:space-between;
-  border-bottom:2px solid var(--ink);
   padding-bottom:18px;
-  margin-bottom:34px;
 }
 
 .idblock h1{
@@ -45,24 +43,42 @@ a:hover{text-decoration:underline}
   color:var(--muted);
 }
 
+/* Meta stamp block */
 .meta{
   min-width:280px;
-  display:grid;
-  gap:8px;
+  border:2px solid var(--ink);
+  padding:12px;
+  background:#fff;
+}
+.meta::before{
+  content:"REGISTRY HEADER";
+  display:block;
+  font-size:10px;
+  letter-spacing:0.22em;
+  margin-bottom:6px;
+  color:var(--muted);
 }
 .kv{
   display:flex;
   justify-content:space-between;
   gap:16px;
-  padding:8px 10px;
-  border:1px solid var(--hair);
-  background:var(--wash);
+  border:none;
+  background:transparent;
+  padding:4px 0;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
   font-size:12px;
 }
 .kv span:first-child{
   color:var(--muted);
   letter-spacing:0.12em;
+}
+
+/* Hard rule before systems */
+.rule-hard{
+  border:none;
+  height:3px;
+  background:var(--ink);
+  margin: 40px 0 28px;
 }
 
 .panel{
@@ -100,35 +116,51 @@ h2{
   list-style:none;
 }
 
+/* Record index */
+.idx{
+  display:block;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  margin-bottom:4px;
+}
+
+/* Card as ledger entry */
 .card a{
-  display:grid;
-  grid-template-columns: 1fr auto;
-  gap:10px;
-  padding:18px 18px;
-  border:1px solid var(--hair);
-  background:#fff;
-  transition: transform .06s ease, border-color .06s ease;
+  display:block;
+  border-left: 4px solid var(--ink);
+  border-top: 1px solid var(--hair);
+  border-right: none;
+  border-bottom: none;
+  background: transparent;
+  padding: 18px 12px 18px 18px;
+  transition: border-left-width .06s ease;
 }
 .card a:hover{
-  border-color:var(--ink);
-  transform: translateY(-1px);
+  border-left-width: 6px;
   text-decoration:none;
 }
 .name{
+  display:block;
   font-weight:900;
   letter-spacing:0.02em;
   font-size:16px;
 }
 .desc{
-  grid-column:1 / 2;
-  color:var(--muted);
-  font-size:13px;
+  display:block;
+  color: var(--muted);
+  font-size: 12px;
+  max-width: 42ch;
   margin-top:6px;
 }
-.arrow{
-  font-weight:900;
-  align-self:start;
-  font-size:16px;
+
+/* Annex label */
+.annex{
+  font-size:11px;
+  letter-spacing:0.2em;
+  color:var(--muted);
+  margin-bottom:12px;
 }
 
 .stack{
@@ -176,12 +208,12 @@ h2{
   justify-content:center;
   gap:12px;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-  font-size:12px;
+  font-size:10px;
   letter-spacing:0.18em;
   text-transform:uppercase;
 }
 .dot{
-  width:6px;height:6px;border-radius:999px;background:var(--ink);
+  width:4px;height:4px;border-radius:999px;background:var(--ink);
 }
 
 /* Mobile */
@@ -197,6 +229,5 @@ h2{
 @media print{
   .frame{max-width:100%;padding:0}
   a{text-decoration:none}
-  a::after{content:" (" attr(href) ")"; color:var(--muted); font-size:0.9em}
-  .card a{transform:none}
+  a[href^="http"]::after{content:" [" attr(href) "]"; color:var(--muted); font-size:0.9em}
 }
