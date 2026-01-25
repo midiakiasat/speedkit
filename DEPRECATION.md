@@ -12,11 +12,11 @@
 
 ## Additions
 
-New systems may be added. This does not affect existing entries.
+New systems are added via signed commits. Existing entries remain unchanged.
 
 ## Modifications
 
-Existing entries may be updated for:
+Existing entries are updated only for:
 - Factual corrections
 - Status changes (e.g., "live" → "discontinued")
 - Link updates
