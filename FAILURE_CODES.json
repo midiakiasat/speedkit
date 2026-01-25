@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "contract": "immutable",
+  "codes": {
+    "0": {
+      "name": "SUCCESS",
+      "meaning": "Check passed"
+    },
+    "1": {
+      "name": "GENERAL_FAILURE",
+      "meaning": "Unspecified failure"
+    },
+    "2": {
+      "name": "APPEND_ONLY_VIOLATION",
+      "meaning": "Deletion detected in append-only path"
+    },
+    "3": {
+      "name": "WHITESPACE_ONLY_CHANGE",
+      "meaning": "Change contains only whitespace modifications"
+    },
+    "4": {
+      "name": "CHECKSUM_MISMATCH",
+      "meaning": "Index checksum verification failed"
+    },
+    "5": {
+      "name": "FORBIDDEN_MODIFICATION",
+      "meaning": "Protected file modified"
+    }
+  },
+  "rules": {
+    "immutability": "Codes never change semantics",
+    "stability": "New codes append only",
+    "api": "Codes are the API contract"
+  }
+}
