@@ -14,31 +14,37 @@ REMOVAL     DOES NOT EXIST
 
 ENTERED INTO REGISTRY
 IMMUTABLE · FINAL
+```
 
-------------------------------------------------------------
-SYSTEMS
-------------------------------------------------------------
+---
 
-SYS-001  CICULLIS     Irreversible CI gate              REGISTERED
-SYS-002  MK10-PRO     Execution index (frozen)          REGISTERED
-SYS-003  VERIFRAX     Deterministic verification        REGISTERED
-SYS-004  VATFIX       VAT compliance execution          REGISTERED
+### SYSTEMS
 
-------------------------------------------------------------
-ARTIFACTS
-ANNEX A — PRIMITIVE COMPONENTS
-------------------------------------------------------------
+| ID | NAME | DESCRIPTION | STATUS |
+|----|------|-------------|--------|
+| SYS-001 | [CICULLIS](https://github.com/midiakiasat/CICULLIS) | Irreversible CI gate | REGISTERED |
+| SYS-002 | [MK10-PRO](https://github.com/kaaffilm/MK10-PRO) | Execution index (frozen) | REGISTERED |
+| SYS-003 | [VERIFRAX](https://github.com/Verifrax/VERIFRAX) | Deterministic verification | REGISTERED |
+| SYS-004 | [VATFIX](https://github.com/vatfix/VATFix-Plus) | VAT compliance execution | REGISTERED |
 
-PRIM-001  Irreversible execution        GUILLOTINE
-PRIM-002  Irreversible judgment         IRREVOCULL
-PRIM-003  Deterministic witness         ATTESTORIUM
-PRIM-004  Deterministic verification    VALIDEXOR
-PRIM-005  Boundary enforcement          LIMENWARD
-PRIM-006  Origin sealing                ORIGINSEAL
-PRIM-007  Custody primitive             ARCHICUSTOS
-PRIM-008  Temporal finality             KAIROCLASP
+---
 
-------------------------------------------------------------
+### ARTIFACTS — ANNEX A
+
+| ID | DESCRIPTION | NAME |
+|----|-------------|------|
+| PRIM-001 | Irreversible execution | [GUILLOTINE](https://github.com/midiakiasat/guillotine) |
+| PRIM-002 | Irreversible judgment | [IRREVOCULL](https://github.com/midiakiasat/irrevocull) |
+| PRIM-003 | Deterministic witness | [ATTESTORIUM](https://github.com/midiakiasat/attestorium) |
+| PRIM-004 | Deterministic verification | [VALIDEXOR](https://github.com/midiakiasat/validexor) |
+| PRIM-005 | Boundary enforcement | [LIMENWARD](https://github.com/midiakiasat/limenward) |
+| PRIM-006 | Origin sealing | [ORIGINSEAL](https://github.com/midiakiasat/originseal) |
+| PRIM-007 | Custody primitive | [ARCHICUSTOS](https://github.com/midiakiasat/archicustos) |
+| PRIM-008 | Temporal finality | [KAIROCLASP](https://github.com/midiakiasat/kairoclasp) |
+
+---
+
+```
 PROJECTION BOUNDARY
 ------------------------------------------------------------
 
