@@ -1,33 +1,72 @@
 # speedkit.eu
 
-speedkit.eu exposes an index of finished execution systems.
+Index of Completed Execution Systems
 
-## Systems
+REGISTRY OPENED: 2026-01-25
 
-Systems listed are independent. Systems terminate when execution completes or fails. Systems do not receive modifications after publication.
+---
 
-## Repository
+MODE: PUBLIC
+POLICY: APPEND-ONLY
+REMOVAL: DOES NOT EXIST
 
-This repository contains static index material. Files are HTML, CSS, and configuration. No execution occurs in this repository. Execution occurs at system entry points defined in system pages.
+---
 
-## Additions
+ENTERED INTO REGISTRY
+IMMUTABLE · FINAL
 
-New systems are added using append-only procedure. Existing systems are not modified. See ADD_SYSTEM.md for procedure.
+---
 
-## Repository Scope
+## SYSTEMS
 
-This repository is an execution index, not a community surface. The following features are disabled:
+| ID      | NAME     | DESCRIPTION                  | STATUS     |
+|---------|----------|------------------------------|------------|
+| SYS-001 | CICULLIS | Irreversible CI gate         | REGISTERED |
+| SYS-002 | MK10-PRO | Execution index (frozen)     | REGISTERED |
+| SYS-003 | VERIFRAX | Deterministic verification   | REGISTERED |
+| SYS-004 | VATFIX   | VAT compliance execution     | REGISTERED |
 
-- Issues
-- Discussions
-- Projects
-- Wiki
-- Sponsorships
-- Dependabot alerts
-- Auto-generated release notes
+---
 
-This repository contains static index material only. No community interaction surface is provided.
+## ARTIFACTS
 
-## License
+ANNEX A — PRIMITIVE COMPONENTS
 
-MIT License. See LICENSE file.
+| ID       | DESCRIPTION               | NAME        |
+|----------|---------------------------|-------------|
+| PRIM-001 | Irreversible execution    | GUILLOTINE  |
+| PRIM-002 | Irreversible judgment     | IRREVOCULL  |
+| PRIM-003 | Deterministic witness     | ATTESTORIUM |
+| PRIM-004 | Deterministic verification| VALIDEXOR   |
+| PRIM-005 | Boundary enforcement      | LIMENWARD   |
+| PRIM-006 | Origin sealing            | ORIGINSEAL  |
+| PRIM-007 | Custody primitive         | ARCHICUSTOS |
+| PRIM-008 | Temporal finality         | KAIROCLASP  |
+
+---
+
+## PROJECTION BOUNDARY
+
+SPEEDKIT is not a mirror of the author's repositories.
+
+It is a projection of completed execution systems only.
+
+Experimental, developmental, auxiliary, and superseded repositories are excluded.
+
+Authoritative workspace: https://github.com/midiakiasat
+
+Once listed, removal is not permitted.
+
+BOUNDARY ENFORCED
+
+---
+
+REGISTERED · IMMUTABLE · FINAL
+
+---
+
+OUT-OF-BAND CHANNEL: contact@speedkit.eu
+
+---
+
+STATE IS NOT SUBJECT TO INTERPRETATION
