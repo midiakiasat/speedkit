@@ -7,42 +7,35 @@
 body {
     font-family: system-ui, -apple-system, sans-serif;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.6;
     color: #000;
     background-color: #fff;
-    padding: 2rem;
+    padding: 3rem 2rem;
     max-width: 800px;
     margin: 0 auto;
 }
 
 h1 {
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 700;
+    letter-spacing: 1px;
     margin-bottom: 1rem;
 }
 
 h2 {
     font-size: 1rem;
-    font-weight: 400;
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
 }
 
 p {
     margin-bottom: 1rem;
 }
 
-ul {
-    list-style: none;
-    margin-left: 0;
-}
-
-li {
-    margin-bottom: 0.5rem;
-}
-
 section {
-    margin-top: 2rem;
+    margin: 64px 0;
 }
 
 nav {
@@ -56,4 +49,89 @@ a {
 
 a:visited {
     color: #000;
+}
+
+/* Systems — primary authority */
+.systems {
+    list-style: decimal;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-left: 1.5rem;
+}
+
+.systems li {
+    margin: 12px 0;
+}
+
+.systems a {
+    text-decoration: none;
+}
+
+.systems a:hover {
+    text-decoration: underline;
+}
+
+/* Artifacts — subordinate primitives */
+.artifacts {
+    list-style: none;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.artifacts li {
+    margin: 8px 0;
+}
+
+.artifacts span {
+    font-style: italic;
+}
+
+/* Finality divider */
+.final-divider {
+    border: none;
+    height: 2px;
+    background: #000;
+    margin: 80px 0;
+}
+
+/* Closure statement */
+.closure {
+    margin-top: 80px;
+    font-weight: 700;
+}
+
+/* Print-grade stylesheet */
+@media print {
+    body {
+        padding: 0;
+        max-width: 100%;
+        font-size: 11pt;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    a::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #666;
+    }
+    
+    .systems a::after,
+    nav a::after {
+        content: "";
+    }
+    
+    section {
+        margin: 36pt 0;
+    }
+    
+    .final-divider {
+        margin: 48pt 0;
+    }
+    
+    .closure {
+        margin-top: 48pt;
+    }
 }
