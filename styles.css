@@ -203,14 +203,45 @@ h2 {
 /* Footer seal */
 .seal-footer {
   margin-top: 48px;
+  padding: 16px 0 32px;
+}
+
+.seal-footer .rule {
+  height: 1px;
+  background: var(--rule);
+}
+
+.seal-text {
+  text-align: center;
   padding: 16px 0;
-  border-top: 1px solid var(--ink);
-  display: flex;
-  justify-content: center;
-  gap: 10px;
   font-size: 11px;
   letter-spacing: 0.15em;
   color: var(--muted);
+}
+
+.contact-block {
+  margin-top: 32px;
+  text-align: center;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  color: var(--ink);
+}
+
+.contact-label {
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  opacity: 0.75;
+  margin-bottom: 6px;
+}
+
+.contact-value {
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.contact-value:hover {
+  text-decoration: underline;
 }
 
 /* Scanline subtlety */
