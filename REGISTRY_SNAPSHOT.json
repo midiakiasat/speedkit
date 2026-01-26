@@ -29,8 +29,8 @@
       "id": "SYS-004",
       "name": "VATFIX",
       "description": "VAT compliance execution",
-      "repository": "https://github.com/vatfix/VATFix-Plus",
-      "status": "PENDING"
+      "repository": "https://github.com/vatfix/VATFIX",
+      "status": "REGISTERED"
     }
   ],
   "artifacts": [
@@ -93,6 +93,6 @@
   ],
   "integrity": {
     "hash_algorithm": "SHA-256",
-    "content_hash": "7da3b2c596520466cef552240a50ab37f907a13cecda22a82944b1343e28604e"
+    "content_hash": "55d2ed2fd3b1b9a08620a59e613f9b1c4c32b33e70faf02d515167fa0fae16df"
   }
 }
